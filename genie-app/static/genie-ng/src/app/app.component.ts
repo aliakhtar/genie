@@ -9,10 +9,14 @@ import { invoke } from '@forge/bridge';
 })
 export class AppComponent {
 
+  loaded: boolean = false;
+  result: string = "?";
+
   ngOnInit() {
     console.log("In init, invoking...");
     invoke('getText', { example: 'my-invoke-variable' }).then(result => {
       console.log("Received invoke result", result);
+      this.result = <string>result;
     });
   }
 }
