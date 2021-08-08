@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { invoke } from '@forge/bridge';
 
 function App() {
-  return (
-    <div className="App">
-      Cool dawg
-    </div>
-  );
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        // @ts-ignore
+        invoke('getText', { example: 'my-invoke-variable' }).then(setData);
+    }, []);
+
+    return (
+        <div>
+            {data ? data : 'Loading...'}
+        </div>
+    );
 }
 
 export default App;
