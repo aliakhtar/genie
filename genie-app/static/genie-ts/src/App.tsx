@@ -19,7 +19,7 @@ function App() {
 
     return (
         <div style={styles} >
-            <iframe style={styles} src="https://genie-frontend.storage.googleapis.com/index.html?reload=false" />
+            <iframe style={styles} src="https://genie-frontend.storage.googleapis.com/index.html?reload=1112" />
         </div>
     );
 }
