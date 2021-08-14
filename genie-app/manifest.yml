@@ -10,9 +10,12 @@ modules:
       handler: index.handler
 resources:
   - key: main
-    #path: static/hello-world/build
-    #path: static/genie-ng/dist/genie-ng
     path: static/genie-ts/build
 app:
   id: ari:cloud:ecosystem::app/aa5d81bb-3f07-4858-8569-2d72167d4b17
   name: genie-app
+
+permissions:
+  external:
+    frames:
+      - 'https://genie-frontend.storage.googleapis.com/index.html'

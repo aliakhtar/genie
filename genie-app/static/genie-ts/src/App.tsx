@@ -12,7 +12,7 @@ function App() {
 
     return (
         <div>
-            <Dictaphone />
+            <iframe src="https://genie-frontend.storage.googleapis.com/index.html" />
         </div>
     );
 }
