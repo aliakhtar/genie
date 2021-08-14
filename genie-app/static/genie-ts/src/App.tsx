@@ -12,7 +12,7 @@ function App() {
 
     return (
         <div>
-            <iframe src="https://genie-frontend.storage.googleapis.com/index.html" />
+            <iframe src="https://genie-frontend.storage.googleapis.com/index.html?reload=true" />
         </div>
     );
 }
