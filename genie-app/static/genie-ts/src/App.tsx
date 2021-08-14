@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { invoke } from '@forge/bridge';
+import { router } from '@forge/bridge';
 import CSS from 'csstype';
 
 
@@ -24,6 +25,8 @@ function App() {
         websocket.onclose = e=> console.log("ws closed", e);
         websocket.onmessage = e=> console.log("ws msg", e);
         websocket.onerror = e=> console.log("ws error", e);
+
+        router.open('http://genie-frontend.storage.googleapis.com/index.html');
 
     }
 
