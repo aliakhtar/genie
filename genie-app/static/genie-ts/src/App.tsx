@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { invoke } from '@forge/bridge';
-import Dictaphone from "./Dictaphone";
+import CSS from 'csstype';
+
+
+
+const styles: CSS.Properties = {
+    width: "100%",
+    height: "100%"
+};
 
 function App() {
     const [data, setData] = useState(null);
@@ -11,8 +18,8 @@ function App() {
     }, []);*/
 
     return (
-        <div>
-            <iframe src="https://genie-frontend.storage.googleapis.com/index.html?reload=true" />
+        <div style={styles} >
+            <iframe style={styles} src="https://genie-frontend.storage.googleapis.com/index.html?reload=false" />
         </div>
     );
 }
