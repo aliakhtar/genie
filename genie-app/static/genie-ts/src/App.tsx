@@ -10,7 +10,23 @@ const styles: CSS.Properties = {
 };
 
 function App() {
+    const url = "wss://echo.websocket.org";
     const [data, setData] = useState(null);
+
+    function testWebSocket()
+    {
+        const websocket = new WebSocket(url);
+        websocket.onopen = e=> {
+            console.log("ws opened", e);
+            console.log("sending ping");
+            websocket.send("ping");
+        }
+        websocket.onclose = e=> console.log("ws closed", e);
+        websocket.onmessage = e=> console.log("ws msg", e);
+        websocket.onerror = e=> console.log("ws error", e);
+
+    }
+
 
     /*useEffect(() => {
         // @ts-ignore
@@ -19,7 +35,7 @@ function App() {
 
     return (
         <div style={styles} >
-            <iframe style={styles} src="https://genie-frontend.storage.googleapis.com/index.html?reload=1112" />
+            <button onClick={testWebSocket}>Test</button>
         </div>
     );
 }

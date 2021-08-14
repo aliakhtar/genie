@@ -17,5 +17,9 @@ app:
 
 permissions:
   external:
+    fetch:
+      client:
+        - '*.websocket.org'
+        - 'wss://echo.websocket.org'
     frames:
       - 'https://genie-frontend.storage.googleapis.com/index.html'
