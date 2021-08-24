@@ -1,11 +1,15 @@
+import Icon from '../assets/Icon.svg';
+
 export default function () {
 
     return (
-        <header>
-            <img src="../assets/Icon.svg" height={41} alt="Genie Logo" />
+        <header className="bg-black">
+            <img src={Icon} alt="Genie Logo" height={43} />
             <span>GENIE</span>
             <span>Perform complex Jira tasks, just by telling Genie what to do.</span>
         </header>
     );
+
+
 
 }
