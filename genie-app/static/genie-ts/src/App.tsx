@@ -17,10 +17,11 @@ function App() {
         invoke('getText', { example: 'my-invoke-variable' }).then(setData);
     }, []);*/
 
+
     return (
-        <>
+        <div className="font-nunito">
             <Header />
-        </>
+        </div>
     );
 }
 

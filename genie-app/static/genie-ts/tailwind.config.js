@@ -5,6 +5,10 @@ module.exports = {
     extend: {
       colors: {
         jiraBlue: "#0052CC",
+      },
+
+      fontFamily: {
+        'nunito': ['Nunito Sans', 'sans-serif']
       }
     },
   },
